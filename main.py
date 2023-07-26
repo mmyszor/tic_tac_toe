@@ -24,7 +24,7 @@ def DrawBoard():
    
 #This Function Checks position is empty or not    
 def CheckPosition(x):    
-    if(type(board[x]) == int):    
+    if(board[x]!="X"and board[x]!="O"):    
         return True    
     else:    
         return False    
@@ -52,7 +52,7 @@ def CheckWin():
     elif(board[3] == board[5] and board[5] == board[7] and board[5] != ' '):    
         Game=Win    
     #Match Tie or Draw Condition    
-    elif(board[1]!=' ' and board[2]!=' ' and board[3]!=' ' and board[4]!=' ' and board[5]!=' ' and board[6]!=' ' and board[7]!=' ' and board[8]!=' ' and board[9]!=' '):    
+    elif((board[1]=='X' or board[1]=='O') and (board[2]=='X' or board[2]=='O') and (board[3]=='X' or board[3]=='O') and (board[4]=='X' or board[4]=='O') and (board[5]=='X' or board[5]=='O') and (board[6]=='X' or board[6]=='O') and (board[7]=='X' or board[7]=='O') and (board[8]=='X' or board[8]=='O') and (board[9]=='X' or board[9]=='O')):
         Game=Draw    
     else:            
         Game=Running    
